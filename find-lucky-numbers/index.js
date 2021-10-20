@@ -1,10 +1,11 @@
 function findLuckyNumbers(numbersToFind) {
-    possiblyLuckyNumbers = [1,2,3,4,5,6,7,8,9,10]
+    possibleLuckyNumbers = [1,2,3,4,5,6,7,8,9,10]
     luckyNumbers = []
 
     for (let i = 0; i < numbersToFind; i++) {
-        let randomNumber = Math.floor(possiblyLuckyNumbers.length * Math.random())
-        luckyNumbers.push(possiblyLuckyNumbers[randomNumber])
+        let randomNumber = Math.floor(possibleLuckyNumbers.length * Math.random())
+        luckyNumbers.push(possibleLuckyNumbers[randomNumber])
+        possibleLuckyNumbers.splice(randomNumber,1)
     }
     return luckyNumbers
 }
